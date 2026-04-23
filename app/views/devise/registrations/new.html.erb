@@ -1,0 +1,46 @@
+<div class="space-y-2 text-center">
+  <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Create your account</h2>
+  <p class="text-sm text-slate-500">It only takes a minute. No credit card required.</p>
+</div>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "mt-8 space-y-5" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="space-y-1.5">
+    <%= f.label :email, class: "block text-sm font-medium text-slate-700" %>
+    <%= f.email_field :email,
+          autofocus: true,
+          autocomplete: "email",
+          placeholder: "you@example.com",
+          class: "block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20" %>
+  </div>
+
+  <div class="space-y-1.5">
+    <div class="flex items-baseline justify-between">
+      <%= f.label :password, class: "block text-sm font-medium text-slate-700" %>
+      <% if @minimum_password_length %>
+        <span class="text-xs text-slate-400"><%= @minimum_password_length %>+ characters</span>
+      <% end %>
+    </div>
+    <%= f.password_field :password,
+          autocomplete: "new-password",
+          placeholder: "Create a password",
+          class: "block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20" %>
+  </div>
+
+  <div class="space-y-1.5">
+    <%= f.label :password_confirmation, "Confirm password", class: "block text-sm font-medium text-slate-700" %>
+    <%= f.password_field :password_confirmation,
+          autocomplete: "new-password",
+          placeholder: "Re-enter your password",
+          class: "block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 shadow-sm transition placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20" %>
+  </div>
+
+  <%= f.submit "Create account",
+        class: "w-full cursor-pointer rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2" %>
+<% end %>
+
+<p class="mt-8 text-center text-sm text-slate-500">
+  Already have an account?
+  <%= link_to "Sign in", new_session_path(resource_name), class: "font-medium text-indigo-600 hover:text-indigo-500" %>
+</p>
