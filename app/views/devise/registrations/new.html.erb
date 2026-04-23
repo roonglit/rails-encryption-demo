@@ -40,6 +40,8 @@
         class: "w-full cursor-pointer rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2" %>
 <% end %>
 
+<%= render "devise/shared/oauth" %>
+
 <p class="mt-8 text-center text-sm text-slate-500">
   Already have an account?
   <%= link_to "Sign in", new_session_path(resource_name), class: "font-medium text-indigo-600 hover:text-indigo-500" %>

@@ -37,6 +37,8 @@
         class: "w-full cursor-pointer rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2" %>
 <% end %>
 
+<%= render "devise/shared/oauth" %>
+
 <% if devise_mapping.registerable? %>
   <p class="mt-8 text-center text-sm text-slate-500">
     New here?
