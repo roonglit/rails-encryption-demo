@@ -33,6 +33,9 @@
 # Ignore key files for decrypting credentials and more.
 /config/*.key
 
+# Demo repo: don't ship encrypted credentials either — readers regenerate their own.
+/config/credentials.yml.enc
+
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
