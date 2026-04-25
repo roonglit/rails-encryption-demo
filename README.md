@@ -2,7 +2,7 @@
 
 A minimal Rails 8.1 playground for exploring **Active Record encryption** — encrypting OAuth access/refresh tokens at the model boundary — on top of Devise authentication (email + "Sign in with Google") and a Tailwind-styled UI.
 
-Companion repo for the article *How to Safely Store OAuth Access Tokens in Rails with Active Record Encryption*(https://medium.com/@roonglit/how-to-safely-store-oauth-access-tokens-in-rails-with-active-record-encryption-56d1ca3bce6c).
+Companion repo for the article [*How to Safely Store OAuth Access Tokens in Rails with Active Record Encryption*](https://medium.com/@roonglit/how-to-safely-store-oauth-access-tokens-in-rails-with-active-record-encryption-56d1ca3bce6c).
 
 ## Stack
 
